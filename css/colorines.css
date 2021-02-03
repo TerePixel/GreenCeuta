@@ -12,7 +12,8 @@ body {
         width: 90%;
         height: 90vh; /*altura de la vista 1 pantallazo */
         max-width: 900vh;
-        margin: 2em auto;    
+        margin: 2em auto;
+	background-color:LightBlue;
       }
 
 .BOX{

@@ -1,0 +1,106 @@
+/*para pantallas de 400px para abajo pantalla mobil */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: calibri;
+}
+
+
+body {
+        width: 90%;
+        height: 90vh; /*altura de la vista 1 pantallazo */
+        max-width: 900vh;
+        margin: 2em auto;    
+      }
+
+.BOX{
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-areas:
+                "header"
+                "nav"
+                "article"
+                "ads "
+                "footer ";
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 50px 1fr 50px 70px; 
+    /*grid-auto-rows: 1fr;*/
+    grid-gap:15px;
+}
+
+header{
+       grid-area: header;
+       background-color: tan;
+ 
+}
+
+
+.nav{
+	grid-area: nav;
+	background-color: peru;
+
+}
+
+article{
+	grid-area: article;
+	background-color: chocolate;
+
+}
+
+.ads{
+	grid-area: ads;
+	background-color: SandyBrown;
+}
+
+
+footer{
+	grid-area: footer;
+	background-color: Sienna;
+}
+
+.BOX > header, div, article, footer{
+    display: flex;
+    border-radius: 10px;
+    font-size:30px;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/*para pantallas tablet*/
+@media screen and (min-width: 700px) {   
+
+    .BOX {
+            display: grid;
+            grid-template-areas:
+                "nav header"
+                "nav article"
+                "nav ads"
+                "nav footer";
+
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 50px 1fr 50px 50px; 
+            grid-gap:15px;
+        }
+}
+
+    /*para pantallas mas grandes de 1200px para arriba pantalla escritorio*/
+@media screen and (min-width: 1200px) {   
+
+    .BOX{
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "ads article"
+            "footer footer";
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 50px 50px 1fr 50px 50px;
+        grid-gap: 15px;
+    }
+ }
